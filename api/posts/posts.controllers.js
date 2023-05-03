@@ -1,6 +1,6 @@
 const Post = require('../../models/Post');
 
-exports.fetchPost = async (postId) => {
+exports.fetchPost = async (postId, next) => {
   try {
     const post = await Post.findById(postId);
     return post;
